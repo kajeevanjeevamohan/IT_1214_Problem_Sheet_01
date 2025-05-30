@@ -53,7 +53,7 @@ class BookingSystem {
             if (tickets[i].getTicketNumber() == ticketNumber) {
                 System.out.println("Cancelling ticket for seat " + tickets[i].getSeatNumber());
 
-                // Shift remaining tickets to avoid gap
+                
                 for (int j = i; j < ticketCount - 1; j++) {
                     tickets[j] = tickets[j + 1];
                 }
