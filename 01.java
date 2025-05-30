@@ -34,13 +34,12 @@ class Student {
         this.daysAttended = daysAttended;
     }
 
-    @Override
     public String toString() {
         return "Student ID: " + studentId + ", Name: " + name + ", Days Attended: " + daysAttended;
     }
 }
 
-// Classroom.java
+
  class Classroom {
     private Student[] students;
     private int studentCount;
@@ -77,7 +76,7 @@ class Student {
     }
 }
 
-// Main.java
+
  class Main {
     public static void main(String[] args) {
         Classroom classroom = new Classroom();
@@ -87,13 +86,10 @@ class Student {
         classroom.addStudent(new Student(102, "Bob Jones", 15));
         classroom.addStudent(new Student(103, "Carol Lee", 10));
 
-        // Update Bob Jones's attendance to 16 days
         classroom.updateAttendance(102, 16);
 
-        // Attempt to update attendance for a non-existent student
         classroom.updateAttendance(104, 14);
 
-        // Display all student details
         classroom.displayAllStudents();
     }
 }
